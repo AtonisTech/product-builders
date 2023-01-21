@@ -1,0 +1,33 @@
+{
+    "name": "APP MAKER",
+    "nav":[
+        {
+            "label":"Podcast",
+            "url":"/podcasts"
+        },
+        {
+            "label": "Services",
+            "url": "#services"
+        },
+        {
+            "label": "Projects",
+            "url": "#projects"
+        },
+        {
+            "label": "Success Stories",
+            "url": "#"
+        },
+        {
+            "label": "Case Studies",
+            "url": "/case-studies"
+        },
+        {
+            "label": "Testimonials",
+            "url": "#testimonials"
+        }
+    ],
+    "deticatedAction":{
+        "label":"Hire Us",
+        "url":"#hire-us"
+    }
+}
