@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./header";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+p{
+  @apply mt-0 mb-[10px] text-base leading-7;
+}
+label{
+  @apply block;
+}
+
+h2 {
+  @apply mt-0 mb-0 uppercase font-high font-semibold;
+  color: #161617;
+  font-size: 4.209em;
+  line-height: 1em;
+}
+h3 {
+  @apply mt-0 mb-4 uppercase font-high font-semibold;
+  color: #161617;
+  font-size: 3.157em;
+  line-height: 1em;
+}
+h6 {
+  @apply mt-0  uppercase font-high font-semibold;
+  margin-bottom: 8px;
+  color: #161617;
+  font-size: 1.333em;
+  line-height: 1em;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @apply relative px-[40px];
+}
+
+
+@media(min-width:1280px){
+  .container{
+    @apply max-w-7xl;
+  }
+}
+
+.card{
+  @apply overflow-hidden mx-[7.5px] px-[16px] py-[32px] rounded bg-white shadow-[1px_0_12px_0_rgb(0,0,0.1.2)];
+}
