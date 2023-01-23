@@ -4,7 +4,7 @@ import React from "react";
 import directorData from "../../data/director.json";
 import linkedinLogo from "../../public/linkedin.svg";
 import {Pathway_Gothic_One} from "@next/font/google"
-const alternateFont = Pathway_Gothic_One({ weight:"400"});
+const alternateFont = Pathway_Gothic_One({ weight: "400", subsets: ['latin' , 'latin-ext'] });
 import img1 from "../../public/footer/one.png";
 import img2 from "../../public/footer/two.png";
 import img3 from "../../public/footer/three.png";
