@@ -46,8 +46,8 @@ const TechCard = () => {
                 </div>
                 <div className="mx-[-7.5px] flex flex-wrap">
                     <div className="flex flex-row justify-evenly text-justify">
-                        {details.map((a) => {
-                            return <div className="card flex flex-col">
+                        {details.map((a,ind) => {
+                            return <div key={ind} className="card flex flex-col">
                                 <div className=" relative flex w-full h-[64px] mb-[32px] justify-center flex-wrap">
                                     <div className="absolute z-20 flex h-[64px] mr-auto ml-auto justify-center items-center">
                                         <Image src={`/assets/${a.icon}`} alt={"mobile icon is not displayed"} width={30} height={30}></Image>
