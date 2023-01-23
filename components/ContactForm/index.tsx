@@ -191,7 +191,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
             <div className="absolute top-20 left-auto right-0 bottom-auto w-64 mr-3.5 flex-col items-start flex mt-2 mb-6 content-start">
                 <div>
                     <div className=" relative flex mb-6 flex-col justify-start flex-nowrap items-start">
-                        <p className="text-white p-4 self-start rounded-[3px] bg-accent-200">“Hi, I’m Vaibhav (or just 'V'). <br /> Are you looking for an experienced development team? <br />Look no further. <br /><span className=" text-sec-brand-600">Contact us today for your</span> <span className="text-sec-brand-600">free consultation worth $900!</span>” </p>
+                        <p className="text-white p-4 self-start rounded-[3px] bg-accent-200">“Hi, I’m Vaibhav (or just &apos;V&apos;). <br /> Are you looking for an experienced development team? <br />Look no further. <br /><span className=" text-sec-brand-600">Contact us today for your</span> <span className="text-sec-brand-600">free consultation worth $900!</span>” </p>
                         <div className=" absolute left-[8%] top-auto right-auto bottom-[-14px] h-6 w-6 mb-0 border-t-[18px] border-r-[16px] border-b border-l-[8px] border-l-accent-600 border-r-accent-600 border-t-accent-200 border-b-black" style={{ borderTopStyle: 'solid',borderBottomStyle: 'none',borderLeftStyle: 'solid'}}></div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
                                             <div className="flex p-6 flex-row justify-between flex-wrap items-stretch content-between text-base">
                                                 <div className="h-[32px] mr-auto mb-6 ml-auto pr-4 pl-4 justify-center items-center rounded-[3px] text-center bg-[#e9e8f0] flex">1 / 6</div>
                                                 <div className="w-full self-stretch">
-                                                    <label htmlFor="name" className="mb-7 text-black text-xl font-semibold text-center">Let's start with your name:</label>
+                                                    <label htmlFor="name" className="mb-7 text-black text-xl font-semibold text-center">Let&apos;s start with your name:</label>
                                                     <input type="text" className="focus:outline-none focus:border-red-600 block w-[80%] h-[60px] mx-auto mt-[48px] mb-[24px] pb-[10px] border border-b-[rgb(197, 194, 207)] border-t-0 border-x-0 text-[28px] text-center px-3 pt-2" name="name" placeholder="Enter your name" id="name-input"/>
                                                     <div className="flex h-[48px] justify-center items-center text-base">
                                                         {/* <div id="name-alert" className="text-alert" style="display: none;">Error: Please provide your name to continue</div> */}
@@ -239,7 +239,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
                 </div>
             </div>
             <div className="flex mr-[-15px] ml-[-15px] flex-wrap mb-4 px-[15px] flex-1">
-                <div className=" text-accent-100 uppercase text-center text-xs w-full font-semibold mt-[40px]">You're in good company</div>
+                <div className=" text-accent-100 uppercase text-center text-xs w-full font-semibold mt-[40px]">You&apos;re in good company</div>
             </div>
             <div className="flex flex-row justify-center items-center mr-[-15px] ml-[-15px] flex-wrap">
                 <div className="max-w-[83%] basis-[83%] mb-4 px-[15px] flex-1">
