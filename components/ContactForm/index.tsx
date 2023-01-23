@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import directorData from "../../data/director.json";
 import linkedinLogo from "../../public/linkedin.svg";
-import {Pathway_Gothic_One} from "@next/font/google"
+import {Pathway_Gothic_One} from "@next/font/google";
 const alternateFont = Pathway_Gothic_One({ weight: "400", subsets: ['latin' , 'latin-ext'] });
 import img1 from "../../public/footer/one.png";
 import img2 from "../../public/footer/two.png";
@@ -35,7 +35,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
                     </Link>
                 </div>
                 <div>
-                    <p className="text-white opacity-70 text-sm mb-0">Director @ Five2One Tech Labs</p>
+                    <p className="text-white opacity-70 text-sm mb-0">Director @ Atonis Tech</p>
                 </div>
             </div>
             <div className="mt-0 mb-0 justify-center items-center flex mr-[-15px] ml-[-15px] flex-wrap">
