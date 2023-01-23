@@ -51,7 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                                 <div className=" shadow-[24px_0_38px_0_rgba(22,22,23,.2),9px_0_46px_0_rgba(0,0,0,.2),11px_0_15px_0_rgba(0,0,0,.2)] absolute overflow-hidden w-full h-full rotate-[-120deg]">
                                     <div className=" absolute flex w-full h-full px-[15px] rotate-90 origin-[50%_50%] text-white text-[13px] text-center">
                                         <div className=" fixed -left-full -top-[25%] right-0 bottom-auto overflow-visible w-auto h-[150%] rotate-[-15deg]">
-                                            <video ref={vidRef} className=" bg-cover absolute m-auto w-full h-full -right-full -bottom-full -left-full -top-full object-cover z-[-100] inline-block align-baseline" playsInline={true} loop={true} autoPlay={true} style={{ backgroundPosition: '50% 50%' }} src={'/hero_animation.webm'}></video>
+                                            <video ref={vidRef} className=" bg-cover absolute m-auto w-full h-full -right-full -bottom-full -left-full -top-full object-cover z-[-100] inline-block align-baseline" playsInline={true} loop={true} autoPlay={true} style={{ backgroundPosition: '50% 50%' }} src={'/hero_animation.mp4'} ></video>
                                         </div>
                                     </div>
                                 </div>
