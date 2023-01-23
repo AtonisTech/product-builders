@@ -16,13 +16,20 @@ module.exports = {
 			},
 			fontFamily: {
 				ibm: ['var(--font-ibm)', ...fontFamily.sans],
+				high: ['var(--font-pathway)', ...fontFamily.sans],
 			},
 			colors: {
 				'brand': {
 					600: '#df3940',
 				},
 				'sec-brand': {
+					400:"#fde9a5",
 					600: '#f9c81b',
+				},
+				"accent":{
+					100:"#8b8089",
+					200:"#52414e",
+					600:"#3e2b3a"
 				}
 			}
 		},

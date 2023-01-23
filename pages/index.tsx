@@ -1,5 +1,7 @@
 import Head from 'next/head'
-
+import Grid from '@components/Grid'
+import TechCard from '@components/TechnologyCard'
+import HeroSection from '@components/HeroSection'
 
 export default function Home() {
 	return (
@@ -10,6 +12,9 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/logo-96.png" />
 			</Head>
+			<HeroSection/>
+			<Grid/>
+			<TechCard/>
 		</>
 	)
 }

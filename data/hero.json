@@ -1,0 +1,15 @@
+{
+    "heading":["REVENUE FOCUSED PRODUCTS.","BUILT TO SELL."],
+    "highlights":[
+        "4+ million lines of code | Millions of users reached | Millions of dollars made",
+        "30+ industries  | 40+ winners | World class engineering"
+    ],
+    "action":{
+        "label":"Hire Us",
+        "url":"#hire-us"
+    },
+    "secAction":{
+        "label":"want to see our work?",
+        "url":"#projects"
+    }
+}
