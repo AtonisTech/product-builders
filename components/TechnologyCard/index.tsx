@@ -74,7 +74,7 @@ const TechCard = () => {
                 <div className="mx-[-7.5px] flex flex-col gap-5 lg:flex-wrap lg:flex-row">
                     {
                         details.map((a, ind) => {
-                            return <div className="mb-0 px-0 flex-1 bg-transparent">
+                            return <div key={ind} className="mb-0 px-0 flex-1 bg-transparent">
                                 <div className="h-full overflow-hidden mx-[7.5px] py-6 px-4 rounded-[3px] bg-white shadow-[1px_0_12px_0_rgba(0,0,0,.12)] text-center">
                                     <div className=" relative flex w-full h-[64px] mb-[32px] justify-center flex-wrap">
                                         <div className=" absolute z-20 flex h-[64px] mx-auto justify-center items-center">
@@ -106,7 +106,7 @@ const TechCard = () => {
                         <div className=" flex mb-[40px] flex-col text-center">
                             <div className="text-[#161617] mb-4 text-xs font-semibold leading-tight uppercase">Meet the 521 Alumni</div>
                             <h3>technology Driven by results</h3>
-                            <p>Innovate your company's technology by partnering with a dev team that's done it before. We've helped our clients launch digital products in over 20+ industries.</p>
+                            <p>Innovate your company&apos;s technology by partnering with a dev team that&apos;s done it before. We&apos;ve helped our clients launch digital products in over 20+ industries.</p>
                         </div>
                     </div>
                 </div>
@@ -135,6 +135,11 @@ const TechCard = () => {
                             }
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className=" absolute left-0 top-[-76px] right-0 bottom-0 flex h-auto justify-center items-start">
+                <div className="relative w-[1200px] h-full">
+                    
                 </div>
             </div>
         </div>
