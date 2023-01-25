@@ -34,6 +34,14 @@ h3 {
   font-size: 3.157em;
   line-height: 1em;
 }
+
+h5 {
+  @apply my-0 uppercase font-high font-semibold;
+  color: #161617;
+  font-size: 1.777em;
+  line-height: 1em;
+}
+
 h6 {
   @apply mt-0  uppercase font-high font-semibold;
   margin-bottom: 8px;
@@ -60,6 +68,12 @@ img {
 @media(min-width:1280px){
   .container{
     @apply max-w-7xl;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    @apply px-0;
   }
 }
 
