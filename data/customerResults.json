@@ -1,0 +1,220 @@
+{
+    "items":[
+        {
+            "banner":"customer1.png",
+            "name":"customer1-name.png",
+            "nameWidth":144,
+            "nameHeight":21,
+            "tags":"Supply chain / Blockchain",
+            "net":"Raised $23.5 Million"
+        },
+        {
+            "banner": "customer2.jpeg",
+            "name": "customer2-name.svg",
+            "nameWidth": 126,
+            "nameHeight": 32,
+            "tags": "Automotive / Marketplace / WebApp",
+            "net": "95,000+ listings in 9 months"
+        },
+        {
+            "banner": "customer3.jpeg",
+            "name": "customer3-name.png",
+            "nameWidth": 107,
+            "nameHeight": 21,
+            "tags": "Fintech / Marketplace / WebApp",
+            "net": "Generates $5.5M MMR"
+        },
+        {
+            "banner": "customer4.jpeg",
+            "name": "customer4-name.svg",
+            "nameWidth": 52,
+            "nameHeight": 40,
+            "tags": "Tax / Automation / Fintech",
+            "net": "App used globally by PwC clients"
+        },
+        {
+            "banner": "customer5.jpeg",
+            "name": "customer5-name.png",
+            "nameWidth": 224,
+            "nameHeight": 40,
+            "tags": "Logistics / Blockchain / WebApp",
+            "net": "Successful Launch to The UN"
+        },
+        {
+            "banner": "customer6.jpeg",
+            "name": "customer6-name.svg",
+            "nameWidth": 200,
+            "nameHeight": 32,
+            "tags": "Solar Energy / Blockchain / Fintech",
+            "net": "$1.3Bn in solar contracts"
+        },
+        {
+            "banner": "customer7.jpeg",
+            "name": "customer7-name.svg",
+            "nameWidth": 122,
+            "nameHeight": 25,
+            "tags": "Education / WebApp / Platform",
+            "net": "Raised $6.5M"
+        },
+        {
+            "banner": "customer8.jpeg",
+            "name": "customer8-name.svg",
+            "nameWidth": 115,
+            "nameHeight": 32,
+            "tags": "Healthcare / Marketplace / App",
+            "net": "Connecting over 10,000+ users"
+        },
+        {
+            "banner": "customer9.png",
+            "name": "customer9-name.png",
+            "nameWidth": 123,
+            "nameHeight": 20,
+            "tags": "Dispute Resolution / AI",
+            "net": "Launching Soon"
+        },
+        {
+            "banner": "customer1.png",
+            "name": "customer1-name.png",
+            "nameWidth": 144,
+            "nameHeight": 21,
+            "tags": "Supply chain / Blockchain",
+            "net": "Raised $23.5 Million"
+        },
+        {
+            "banner": "customer2.jpeg",
+            "name": "customer2-name.svg",
+            "nameWidth": 126,
+            "nameHeight": 32,
+            "tags": "Automotive / Marketplace / WebApp",
+            "net": "95,000+ listings in 9 months"
+        },
+        {
+            "banner": "customer3.jpeg",
+            "name": "customer3-name.png",
+            "nameWidth": 107,
+            "nameHeight": 21,
+            "tags": "Fintech / Marketplace / WebApp",
+            "net": "Generates $5.5M MMR"
+        },
+        {
+            "banner": "customer4.jpeg",
+            "name": "customer4-name.svg",
+            "nameWidth": 52,
+            "nameHeight": 40,
+            "tags": "Tax / Automation / Fintech",
+            "net": "App used globally by PwC clients"
+        },
+        {
+            "banner": "customer5.jpeg",
+            "name": "customer5-name.png",
+            "nameWidth": 224,
+            "nameHeight": 40,
+            "tags": "Logistics / Blockchain / WebApp",
+            "net": "Successful Launch to The UN"
+        },
+        {
+            "banner": "customer6.jpeg",
+            "name": "customer6-name.svg",
+            "nameWidth": 200,
+            "nameHeight": 32,
+            "tags": "Solar Energy / Blockchain / Fintech",
+            "net": "$1.3Bn in solar contracts"
+        },
+        {
+            "banner": "customer7.jpeg",
+            "name": "customer7-name.svg",
+            "nameWidth": 122,
+            "nameHeight": 25,
+            "tags": "Education / WebApp / Platform",
+            "net": "Raised $6.5M"
+        },
+        {
+            "banner": "customer8.jpeg",
+            "name": "customer8-name.svg",
+            "nameWidth": 115,
+            "nameHeight": 32,
+            "tags": "Healthcare / Marketplace / App",
+            "net": "Connecting over 10,000+ users"
+        },
+        {
+            "banner": "customer9.png",
+            "name": "customer9-name.png",
+            "nameWidth": 123,
+            "nameHeight": 20,
+            "tags": "Dispute Resolution / AI",
+            "net": "Launching Soon"
+        },
+        {
+            "banner": "customer1.png",
+            "name": "customer1-name.png",
+            "nameWidth": 144,
+            "nameHeight": 21,
+            "tags": "Supply chain / Blockchain",
+            "net": "Raised $23.5 Million"
+        },
+        {
+            "banner": "customer2.jpeg",
+            "name": "customer2-name.svg",
+            "nameWidth": 126,
+            "nameHeight": 32,
+            "tags": "Automotive / Marketplace / WebApp",
+            "net": "95,000+ listings in 9 months"
+        },
+        {
+            "banner": "customer3.jpeg",
+            "name": "customer3-name.png",
+            "nameWidth": 107,
+            "nameHeight": 21,
+            "tags": "Fintech / Marketplace / WebApp",
+            "net": "Generates $5.5M MMR"
+        },
+        {
+            "banner": "customer4.jpeg",
+            "name": "customer4-name.svg",
+            "nameWidth": 52,
+            "nameHeight": 40,
+            "tags": "Tax / Automation / Fintech",
+            "net": "App used globally by PwC clients"
+        },
+        {
+            "banner": "customer5.jpeg",
+            "name": "customer5-name.png",
+            "nameWidth": 224,
+            "nameHeight": 40,
+            "tags": "Logistics / Blockchain / WebApp",
+            "net": "Successful Launch to The UN"
+        },
+        {
+            "banner": "customer6.jpeg",
+            "name": "customer6-name.svg",
+            "nameWidth": 200,
+            "nameHeight": 32,
+            "tags": "Solar Energy / Blockchain / Fintech",
+            "net": "$1.3Bn in solar contracts"
+        },
+        {
+            "banner": "customer7.jpeg",
+            "name": "customer7-name.svg",
+            "nameWidth": 122,
+            "nameHeight": 25,
+            "tags": "Education / WebApp / Platform",
+            "net": "Raised $6.5M"
+        },
+        {
+            "banner": "customer8.jpeg",
+            "name": "customer8-name.svg",
+            "nameWidth": 115,
+            "nameHeight": 32,
+            "tags": "Healthcare / Marketplace / App",
+            "net": "Connecting over 10,000+ users"
+        },
+        {
+            "banner": "customer9.png",
+            "name": "customer9-name.png",
+            "nameWidth": 123,
+            "nameHeight": 20,
+            "tags": "Dispute Resolution / AI",
+            "net": "Launching Soon"
+        }
+    ]
+}

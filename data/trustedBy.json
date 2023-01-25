@@ -1,0 +1,20 @@
+{
+    "items":[
+        {
+            "url":"img1.png",
+            "width":137
+        },
+        {
+            "url": "img2.png",
+            "width": 180
+        },
+        {
+            "url": "img3.png",
+            "width": 176
+        },
+        {
+            "url": "img4.png",
+            "width": 185
+        }
+    ]
+}

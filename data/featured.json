@@ -1,0 +1,48 @@
+{
+	"items": [
+        {
+			"companyLogo": "entrepreneur.png",
+            "width":160,
+			"url": "https://www.entrepreneur.com/article/343281"
+        },
+        {
+			"companyLogo": "yahoo.png",
+            "width": 104,
+			"url": "https://finance.yahoo.com/news/five2one-launches-enterprise-start-success-060000184.html"
+        },
+        {
+			"companyLogo": "reuters.svg",
+            "width": 140,
+			"url": "https://reuters.com/brandfeatures/venture-capital/article?id=160028"
+        },
+        {
+			"companyLogo": "VB.svg",
+            "width": 43,
+			"url": "https://venturebeat.com/2019/09/15/how-to-speed-up-tech-recruitment-get-rid-of-recruiters/"
+        },
+        {
+			"companyLogo": "KPMG.png",
+            "width": 100
+        },
+        {
+			"companyLogo": "CIO.png",
+            "width": 55,
+			"url": "https://www.cio.com.au/article/649450/5-trends-tech-talent-will-define-your-company-future/"
+        },
+        {
+			"companyLogo": "CA.png",
+            "width": 160,
+			"url": "https://www.charteredaccountantsanz.com/news-and-analysis/news/how-to-create-a-mindset-for-success"
+        },
+        {
+			"companyLogo": "smartcompany.png",
+            "width": 179,
+			"url": "https://www.smartcompany.com.au/startupsmart/advice/why-an-idea-doesnt-make-a-busines/"
+        },
+        {
+			"companyLogo": "martec.png",
+            "width": 100,
+			"url": "https://www.themartec.com/insidelook/quantum-computing-machine-learning-work-together"
+        }
+    ]
+}
