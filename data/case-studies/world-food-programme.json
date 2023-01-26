@@ -1,0 +1,42 @@
+{
+    "title": "World Food Programme",
+    "listViewDesc": "The codebase is handed over to OOESCO and WFP who will depend on our infrastructure to make sure food is delivered on time. A long, strong and healthy relationship between Five2One and Devery + WFP spanning over 1 year and counting after starting with just a 8 week project.",
+    "mainImage": "world-food-programme.png",
+    "featuredBy": [
+        "KPMG.png",
+        "CIO.png",
+        "smartcompany.png",
+        "CA.png",
+        "martec.png"
+    ],
+    "feedBack": {
+        "name": "ANDREW RASHEED",
+        "position": "CEO @ Devery.io",
+        "image": "world-food-programme-user.jpeg",
+        "profile": "https://www.linkedin.com/in/andrewr4/",
+        "content": "\"We integrated FIVE 2 ONE into our team to work with us for one of our ongoing international projects. It was a great experience and Vaibhav and his team are second to none.\""
+    },
+    "problem": "Devery + WFP came to us to build a highly sensitive project for OOESCO in Tunisia, they wanted to harness the power of blockchain and modern applications to prevent loss of goods as well as remove an archaic paper system. They were limited in internet availability as well as powerful computers. They needed an application that would track all aspects of the delivery of goods and make sure food can be delivered to schools in an emergency with near almost certainty.",
+    "approach": [
+        "Five2One were given a tight deadline due to the project sensitivity. We sat down with key stake holders and built a highly componentised, simple and reusable design system that was very minimalistic and straight forward to use. We kept the user at the center and ensured everything was kept simple including adding things like OTPs for digital signatures, a PWA for a mobile application for the drivers and a centralised dashboard for OOESCO to co-ordinate deliveries.",
+        "After a quick design sprint and approval, the development was kicked off. The smart contracts were built and deployed to a privatised Ethereum network hosted on AWS. The application was built using DDD, design driven development, as the User Journeys helped built ironclad systems that would ensure 99% uptime and real time delivery of information.",
+        "We used a message queue approach, decoupling our codebase at all instances to allow for low internet situations where data needed to be batched and be kept as close to real time whenever possible. Using simplistic approaches to dijkstra's algorithm we created an optimal delivery network to identify the closest riders to pick up and delivery food to respective locations"
+    ],
+    "approachImg":"world-food-programme-approach.png",
+    "result": [
+        "The codebase is completely absorbed into OOESCO's system and is handed it over to the World Food Programme who will now depend on our infrastructure and code base to make sure food is delivered on time when they deploy it to their infrastructure.",
+        "A long, strong and healthy relationship between Five2One and Devery + WFP spanning over 1 year and counting after starting with just a 8 week project."
+    ],
+    "resultImg":"world-food-programme-res.png",
+    "techs": [
+        "ReactJS",
+        "NodeJS",
+        "Postgres",
+        "AWS ECS",
+        "AWS EBS",
+        "Web3 (blockchain)",
+        "Solidity (Ethereum)",
+        "AWS Ethereum Network",
+        "Docker"
+    ]
+}

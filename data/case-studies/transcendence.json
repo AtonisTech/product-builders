@@ -1,0 +1,35 @@
+{
+    "title": "Transcendence",
+    "listViewDesc": "The token contracts and AWS infrastructure were built and tested to be very robust and strong. The clients went onto raise an undisclosed amount of funds to build Australia's largest Solar Farm Sunraysia.",
+    "mainImage":"study1.jpeg",
+    "featuredBy":[
+        "KPMG.png",
+        "CIO.png",
+        "smartcompany.png",
+        "CA.png",
+        "martec.png"
+    ],
+    "feedBack":{
+        "name":"MILTON ZHOU",
+        "position":"VP & Co-Founder @ Maoneng & TSD Network",
+        "image":"study1_user.jpeg",
+        "profile":"https://www.linkedin.com/in/milton-zhou-44934074/",
+        "content":"FIVE 2 ONE and V built out our entire software architecture, from website, dApp to blockchain smart contracts. Not only did they do an excellent job at this - they always worked like they were part of us, and wanted to see this succeed as much as the TSD/Maoneng team themselves. They would go out of their way to explain and educate the management team about the technicalities and were always available to communicate with. To them - code quality and performance was of paramount importance - and thats how I work!"
+    },
+    "problem":"TSD Came to us in need of an expert to build a extremely simple user interface and experience to allow them to raise 250M dollars in ethereum with an infrastructure that would be built on extreme security and scalability. It needed to be able to handle 10X what a standard token raise could usually handle and create a 2 layered token infrastructure that would allow for internal tokens to be used within their application and facilitate inter chain movement and exchange of tokens.",
+    "approach":"Long scoping sessions with the TSD executive team to build a highly versatile, robust and versatile token infrastructure spanned across 6 contracts with safety fallbacks and defences to prevent advanced forms of attacks. The system was silo-ed with an agile and advanced admin system built on the back of a serverless AWS infrastructure that allowed the main founders of the company to issue and block tokens in an very cost effective manner.",
+    "result":"The token contracts and AWS infrastructure were built and tested to be very robust and strong. The clients went onto raise an undisclosed amount of funds to build Australia's largest Solar Farm Sunraysia",
+    "techs":[
+        "ReactJS",
+        "VueJS",
+        "DynamoDB",
+        "AWS ECS",
+        "AWS EBS",
+        "AWS S3",
+        "Ethereum",
+        "Solidity",
+        "AWS Ethereum Blockchain",
+        "Serverless",
+        "Docker"
+    ]
+}
