@@ -28,9 +28,9 @@ const Page: NextPage = () => {
                     <div>
                         {
                             data.posts.map((post, ind) => {
-                                return <div className='flex mt-[40px] flex-col space-y-6 md:space-y-0 md:flex-row'>
+                                return <div key={ind} className='flex mt-[40px] flex-col space-y-6 md:space-y-0 md:flex-row'>
                                     <Image src={require(`../../public/podcast-platforms/${post.banner}`)} alt="" className='w-full md:w-[40%] h-full mt-auto mb-auto rounded-r'></Image>
-                                    <div key={ind} className='flex pt-0 pl-8 pr-8 md:pl-[60px] flex-col justify-center items-start flex-1 space-y-6'>
+                                    <div className='flex pt-0 pl-8 pr-8 md:pl-[60px] flex-col justify-center items-start flex-1 space-y-6'>
                                         <h5>{post.title}</h5>
                                         <p>{post.content}</p>
                                         <Link href={`/podcast/${post.hash}`} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 inline-block">
