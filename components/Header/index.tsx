@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import logo from "../../public/logo-128.svg";
 import orgData from "../../data/organization.json";
-
+import { useRouter } from 'next/router'
 
 const NavBar = () => {
     return <nav role="navigation" className="flex h-16 justify-end items-center">
@@ -25,16 +25,24 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ onlyLogoOnHeader }) => {
 
+    const router = useRouter();
+    const showNav = router.pathname === "/";
+
     return (
         <header className={`nav`}>
-            <div className="container">
+            {
+                !showNav && <div className=" fixed left-0 top-0 right-auto bottom-auto z-[9000] w-full h-[3px] bg-brand-600 origin-[0%_50%]"></div>
+            }
+            <div className={`container ${!showNav && 'flex justify-center' }`}>
                 <Link href="/" className="flex h-16 items-center relative float-left">
                     <Image src={logo} alt={"company-name"} className="mr-1" height={32} width={32} ></Image>
                     <div className="text-xl justify-center items-center font-semibold text-brand-600 tracking-tight">
                         APP MAKER
                     </div>
                 </Link>
-                <NavBar/>
+                {
+                    showNav && <NavBar />
+                }
             </div>
         </header>
     );
