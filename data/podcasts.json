@@ -12,8 +12,9 @@
     "posts":[
         {
             "title": "Love the solution not the idea: Evan Wong",
+            "banner":"podcast1.png",
             "content": "Raised $2M and on path to raising more. Recently awarded Forbes 30U30 and founder of 2 successful companies. We had an excellent time talking about raising, ideation, business management, startups and the general roller coaster of start ups Some incredible golden nuggets coming up for everyone, super excited to share this and many more in the coming weeks! We sat down with Evan Wong, CEO of 9X award-winning business Checkbox.ai",
-            "url":"/podcast/love-the-solution-not-the-idea-evan-wong"
+            "hash":"love-the-solution-not-the-idea-evan-wong"
         }
     ]
 }
