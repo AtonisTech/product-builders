@@ -1,0 +1,44 @@
+{
+    "title": "SocietyOne",
+    "listViewDesc": "5.5 Million/Month in loans for SocietyOne in 6 months from launch. A highly scalable, smart, user centric product that gives the custom complete power of creating, analysing, evaluating and generating personal loans for their clients.",
+    "mainImage": "societyone.png",
+    "featuredBy": [
+        "KPMG.png",
+        "CIO.png",
+        "smartcompany.png",
+        "CA.png",
+        "martec.png"
+    ],
+    "feedBack": {
+        "name": "ANDREW RASHEED",
+        "position": "CEO @ Devery.io",
+        "image": "world-food-programme-user.jpeg",
+        "profile": "https://www.linkedin.com/in/andrewr4/",
+        "content": "\"We integrated FIVE 2 ONE into our team to work with us for one of our ongoing international projects. It was a great experience and Vaibhav and his team are second to none.\""
+    },
+    "problem": [
+        "SocietyOne needed an expert team to build their broker platform using modern and scalable practices that would allow them to build on a new revenue stream for the business. They needed the team to build the solution in a rapid timeline to deliver a clean, fast and bug free product in 6 weeks.",
+        "(Due to IP some images can't be shown)"
+    ],
+    "approach": [
+        "Five2One sat down with the team and worked out detailed sprints. The entire project was broken down to the tee. At all points during development the application was usable by the internal team, allowing us to identify any UX flaws very early on. The continuous integration and delivery pipeline allowed for updates to be in SoceityOne's management's hand every single day.",
+        "We tightly knit with the product team and testing team to make sure the entire experience was seamless, including data parsing and engineering and the complicated loan acceptance criteria algorithm, whilst building a robust and scalable backend infrastructure.",
+        "(Due to IP some images can't be shown)"
+    ],
+    "approachImg": "societyone-appr.png",
+    "result": [
+        "5.5 Million/Month in loans for SocietyOne in 6 months from launch. A highly scalable, smart, user centric product that gives the custom complete power of creating, analysing, evaluating and generating personal loans for their clients.",
+        "A long, strong and healthy relationship between Five2One and SocietyOne spanning over 1 year and 2 months and counting after starting with just a 6 week project.",
+        "(Due to IP some images can't be shown)"
+    ],
+    "resultImg": "societyone-res.png",
+    "techs": [
+        "VueJS",
+        "NodeJS",
+        "Postgres",
+        "AWS ECS",
+        "AWS EBS",
+        "Python (for scripting)",
+        "ES6"
+    ]
+}

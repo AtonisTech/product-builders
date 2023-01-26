@@ -1,0 +1,37 @@
+{
+    "title": "Autotrader",
+    "listViewDesc": "The project was delivered on time for a massive release and Autotrader saw 3x the expected listings and the project grew to more than 5000 listings in a merely 4 months.",
+    "mainImage": "autotrader.png",
+    "featuredBy": [
+        "KPMG.png",
+        "CIO.png",
+        "smartcompany.png",
+        "CA.png",
+        "martec.png"
+    ],
+    "feedBack": {
+        "name": "Jeremy Gupta",
+        "position": "Ex-CTO Autotrader & CarsGuide",
+        "image": "autotrader-user.jpeg",
+        "profile": "https://www.linkedin.com/in/jeremygupta/",
+        "content": "Autotrader worked with FIVE 2 ONE to bring to life a part of the experience that we predict significant growth in. The challenge was complex from a technical point of view and also required close collaboration with both stakeholders and the internal team - something that didn't prove to be a problem. The results speak for themselves and we've seen significant uplift in the new experience which FIVE 2 ONE should be proud of, we're excited about continuing to partner with them as the experience evolves."
+    },
+    "problem": "Autotrader were ramping up their project with a massive release to 100,000s of users. They needed an expert to team to help them create the perfect product to help get as many users to create listings.",
+    "approach": [
+        "User research was conducted, we presented cases and integrated our design team tightly with their head of product. We worked in an extremely agile manner keeping design 2 sprints ahead of development at all points ensuring maximum impact.",
+        "On the development side, the entire product was engineered to build the most beautiful and seem less user experience, we used our talent to make every part of the interaction exciting and performant. It was a perfect blend of product and engineering."
+    ],
+    "approachImg":"autotrader-appr.png",
+    "result": "The project was delivered on time for a massive release and Autotrader saw 3x the expected listings and the project grew to more than 5000 listings in a merely 4 months.",
+    "resultImg":"autotrader-res.png",
+    "techs": [
+        "VueJS",
+        "Nuxt",
+        "SASS",
+        "NodeJS",
+        "Kubernetes",
+        "PHP",
+        "Sentry",
+        "Google Analytics"
+    ]
+}

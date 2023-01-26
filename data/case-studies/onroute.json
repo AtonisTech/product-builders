@@ -1,0 +1,36 @@
+{
+    "title": "OnRoute",
+    "listViewDesc": "The application was built and released to the customer in budget. The app is currently raising funds after successful runs.",
+    "mainImage": "onroute.png",
+    "featuredBy": [
+        "KPMG.png",
+        "CIO.png",
+        "smartcompany.png",
+        "CA.png",
+        "martec.png"
+    ],
+    "feedBack": {
+        "name": "STEPHANIE KHALIL",
+        "position": "Founder @ OnRoute App",
+        "image": "onroute-user.jpeg",
+        "profile": "https://www.linkedin.com/in/stephanie-khalil-733776137/",
+        "content": "I worked with V and the team to build out OnRoute and had a great time working with them, it was a tough challenge but they did a great job. We ironed out the kinks in our delivery process and built out a quality product that people are using."
+    },
+    "problem": "Onroute came to us to build a state of the art modern solution for the modern traveller. People want to share their experiences and journeys, and they should not be limited to facebooks timeline. Onroute wanted a location sharing newsfeed application that allowed users to track their journeys and share it with friends. The biggest problem onroute faced was accuracy in location tracking coupled with battery usage. Location sharing was extremely battery intensive so Five2One had to come up with a smart way of solving this whislt maintaining the sanctity of the actual application.",
+    "approach": [
+        "The application was broken down into MVP driven features to allow for quick market release. The app was released to the founder every 3 weeks for her to test and was built in an agile manner to ensure we didn't creep scope and become feature heavy.",
+        "In addition we created a malleable infrastructure to expand the scope and add p2p system or friend and follow based system. We underwent regressive location based testing and optimisation to achieve a good balance between battery drainage and location accuracy."
+    ],
+    "approachImg":"onroute-approach.png",
+    "result": "The application was built and released to the customer in budget. The app is currently raising funds after successful runs",
+    "techs": [
+        "React Native",
+        "NodeJS",
+        "MongoDB",
+        "AWS ECS",
+        "AWS EBS",
+        "AWS S3",
+        "Social Auth",
+        "Docker"
+    ]
+}

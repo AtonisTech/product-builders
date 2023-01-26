@@ -1,0 +1,37 @@
+{
+    "title": "Kalinga",
+    "listViewDesc": "The app was delivered in time and in budget and has lead to a 2 year long relationship with them, we're will be launching their web app soon combined with 1000s of users on the application",
+    "mainImage": "Kalinga.jpeg",
+    "featuredBy": [
+        "KPMG.png",
+        "CIO.png",
+        "smartcompany.png",
+        "CA.png",
+        "martec.png"
+    ],
+    "feedBack": {
+        "name": "FRENN ABEN",
+        "position": "CEO and Co-founder @ Kalinga Health",
+        "image": "onroute-user.jpeg",
+        "profile": "https://www.linkedin.com/in/frenn-aben-19934028/",
+        "content": "We developed an intricate and versatile mobile app from scratch using technologies that make Kalinga one of the fastest in the market. The product was designed, developed and engineered in our Sydney office. They were incredible to work with. They were in touch with me all the time, talking to the devs directly was the best experience, and any change I wanted was addressed immediately. Well done to the team for building a great product that is incredibly complex"
+    },
+    "problem": "Kalinga came us needing a feature heavy product that would act as the uber for healthcare. They wanted to monopolise the disability and age care market. The solution needed to have a clean UX and ironclad app that would allow for easy connection between carers and patients. They needed admin access to exec team to approve carers and ensure any complaints could be handled. They also needed real time messaging service that would allow for patients and cares to communicate, automatically book future appointments and carry out all payment transactions within the app automatically.",
+    "approach": [
+        "Five2One broke the application based on customers, we took a customer driven development approach. We chose to combine the carer and patient app into one as we learnt of several instances where customers wanted to be carers as well as patients.",
+        "To minimise resistance to sign up we allowed the user to fully experience the product before committing to using the app which dramatically increased our conversion.",
+        "The app was built out using technologies and processes that allowed the customer and founders to use the app from the very beginning of the development cycle keeping any area of discrepancy to a maximum of one week. This played a pivotal role in getting user feedback. The app was broken into three main segments, the mobile app, the approval admin platform and the web application (in development).",
+        "The initial scope of the application was extremely large so we decoupled large parts of the application to allow for reusability and consistency"
+    ],
+    "result": "The app was delivered in time and in budget and has lead to a 2 year long relationship with them, we're will be launching their web app soon combined with 1000s of users on the application",
+    "techs": [
+        "ReactJS",
+        "VueJS",
+        "NodeJS",
+        "Postgres",
+        "AWS ECS",
+        "AWS EBS",
+        "GraphQL",
+        "Docker"
+    ]
+}
