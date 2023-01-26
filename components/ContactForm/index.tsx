@@ -20,11 +20,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
             <div className="flex justify-center">
                 <h3 className={`text-white text-5xl font-semibold tracking-tight uppercase ${alternateFont.className}`}>Have a project for us?</h3>
             </div>
-            <div className="absolute top-20 left-auto right-0 bottom-auto w-64 mr-3.5 flex-col items-start flex mt-2 mb-6 content-start">
+            <div className="relative top-0 mx-auto lg:absolute lg:top-20 left-auto right-0 bottom-auto w-64 lg:mr-3.5 flex-col items-center lg:items-start flex mt-2 mb-6 content-start">
                 <div>
                     <div className=" relative flex mb-6 flex-col justify-start flex-nowrap items-start">
                         <p className="text-white p-4 self-start rounded-[3px] bg-accent-200">“Hi, I’m Vaibhav (or just &apos;V&apos;). <br /> Are you looking for an experienced development team? <br />Look no further. <br /><span className=" text-sec-brand-600">Contact us today for your</span> <span className="text-sec-brand-600">free consultation worth $900!</span>” </p>
-                        <div className=" absolute left-[8%] top-auto right-auto bottom-[-14px] h-6 w-6 mb-0 border-t-[18px] border-r-[16px] border-b border-l-[8px] border-l-accent-600 border-r-accent-600 border-t-accent-200 border-b-black" style={{ borderTopStyle: 'solid',borderBottomStyle: 'none',borderLeftStyle: 'solid'}}></div>
+                        <div className=" absolute left-1/2 lg:left-[8%] top-auto right-auto bottom-[-14px] h-6 w-6 mb-0 border-t-[18px] border-r-[16px] border-b border-l-[8px] border-l-accent-600 border-r-accent-600 border-t-accent-200 border-b-black" style={{ borderTopStyle: 'solid',borderBottomStyle: 'none',borderLeftStyle: 'solid'}}></div>
                     </div>
                 </div>
                 <div className="w-32 h-32 rounded-full overflow-hidden mr-4 mb-2 grow-0 shrink-0 basis-auto" style={{ backgroundPosition: '50% 30%', backgroundSize: '130%', backgroundImage: `url(/social-customer.jpg)`}}></div>
@@ -39,7 +39,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
                 </div>
             </div>
             <div className="mt-0 mb-0 justify-center items-center flex mr-[-15px] ml-[-15px] flex-wrap">
-                <div className=" max-w-[50%] grow basis-[50%] mb-4 pr-4 pl-4 flex-1">
+                <div className="max-w-full basis-full md:max-w-[50%] grow md:basis-[50%] mb-4 pr-4 pl-4 flex-1">
                     <div className=" relative z-10 flex h-full mt-6 mr-0 ml-0 p-0 justify-center items-center overflow-hidden rounded-[3px] bg-white shadow-[1px_0_12px_0_rgba(0,0,0,.12)] text-center">
                         <div className="w-full">
                             <form>
@@ -70,22 +70,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
                     </div>
                 </div>
             </div>
-            <div className="flex mr-[-15px] ml-[-15px] flex-wrap mb-4 px-[15px] flex-1">
+            <div className="flex mr-[-15px] ml-[-15px] flex-wrap mb-4 px-[15px] flex-1 mt-8">
                 <div className=" text-accent-100 uppercase text-center text-xs w-full font-semibold mt-[40px]">You&apos;re in good company</div>
             </div>
-            <div className="flex flex-row justify-center items-center mr-[-15px] ml-[-15px] flex-wrap">
-                <div className="max-w-[83%] basis-[83%] mb-4 px-[15px] flex-1">
-                    <div className="mt-[-32px] opacity-60 scale-50 flex justify-between flex-nowrap items-end">
-                        <div>
+            <div className="flex flex-row justify-center items-center mr-[-15px] ml-[-15px] flex-wrap pt-14">
+                <div className="max-w-full basis-full lg:max-w-[83%] lg:basis-[83%] mb-4 px-[15px] flex-1">
+                    <div className="mt-[-32px] opacity-60 lg:scale-75 flex justify-between flex-wrap sm:flex-nowrap items-end">
+                        <div className="px-4 mt-4 max-w-[50%] sm:mt-0 sm:max-w-none">
                             <Image alt="" src={img1} width={139}></Image>
                         </div>
-                        <div>
+                        <div className="px-4 mt-8 max-w-[50%] sm:mt-0 sm:max-w-none">
                             <Image alt="" src={img2} width={171}></Image>
                         </div>
-                        <div>
+                        <div className="px-4 mt-8 max-w-[50%] sm:mt-0 sm:max-w-none">
                             <Image alt="" src={img3} width={176}></Image>
                         </div>
-                        <div>
+                        <div className="px-4 mt-8 max-w-[50%] sm:mt-0 sm:max-w-none">
                             <Image alt="" src={img4} width={185}></Image>
                         </div>
                     </div>
