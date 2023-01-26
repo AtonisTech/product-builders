@@ -1,5 +1,5 @@
 ---
-title: 'Love the solution not the idea: Evan Wong'
+title: 'Love the solution not the idea: Levins'
 createdAt: 'January 01, 2023'
 bannerImage: 'podcast1.jpg'
 authorName: 'Evan Wong'
