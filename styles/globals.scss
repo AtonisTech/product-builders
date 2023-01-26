@@ -23,22 +23,30 @@ label{
 }
 
 h2 {
-  @apply mt-0 mb-0 uppercase font-high font-semibold;
+  @apply my-0 uppercase font-high font-semibold;
   color: #161617;
-  font-size: 4.209em;
-  line-height: 1em;
+  font-size: 4.209em !important;
+  line-height: 1em !important;
 }
+
 h3 {
   @apply mt-0 mb-4 uppercase font-high font-semibold;
   color: #161617;
-  font-size: 3.157em;
+  font-size: 3.157em !important;
+  line-height: 1em;
+}
+
+h4 {
+  @apply my-0 uppercase font-high font-semibold;
+  color: #161617;
+  font-size: 2.369em !important;
   line-height: 1em;
 }
 
 h5 {
   @apply my-0 uppercase font-high font-semibold;
   color: #161617;
-  font-size: 1.777em;
+  font-size: 1.777em !important;
   line-height: 1em;
 }
 
