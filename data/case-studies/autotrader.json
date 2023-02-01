@@ -3,11 +3,26 @@
     "listViewDesc": "The project was delivered on time for a massive release and Autotrader saw 3x the expected listings and the project grew to more than 5000 listings in a merely 4 months.",
     "mainImage": "autotrader.png",
     "featuredBy": [
-        "KPMG.png",
-        "CIO.png",
-        "smartcompany.png",
-        "CA.png",
-        "martec.png"
+        {
+            "url":"KPMG.png",
+            "width":100
+        },
+        {
+            "url":"CIO.png",
+            "width":55
+        },
+        {
+            "url":"smartcompany.png",
+            "width":179
+        },
+        {
+            "url":"CA.png",
+            "width":160
+        },
+        {
+            "url":"martec.png",
+            "width":100
+        }
     ],
     "feedBack": {
         "name": "Jeremy Gupta",

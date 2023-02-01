@@ -3,11 +3,26 @@
     "listViewDesc": "The app was delivered in time and in budget and has lead to a 2 year long relationship with them, we're will be launching their web app soon combined with 1000s of users on the application",
     "mainImage": "kalinga.jpeg",
     "featuredBy": [
-        "KPMG.png",
-        "CIO.png",
-        "smartcompany.png",
-        "CA.png",
-        "martec.png"
+        {
+            "url":"KPMG.png",
+            "width":100
+        },
+        {
+            "url":"CIO.png",
+            "width":55
+        },
+        {
+            "url":"smartcompany.png",
+            "width":179
+        },
+        {
+            "url":"CA.png",
+            "width":160
+        },
+        {
+            "url":"martec.png",
+            "width":100
+        }
     ],
     "feedBack": {
         "name": "FRENN ABEN",

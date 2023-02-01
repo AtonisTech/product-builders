@@ -3,11 +3,26 @@
     "listViewDesc": "The codebase is handed over to OOESCO and WFP who will depend on our infrastructure to make sure food is delivered on time. A long, strong and healthy relationship between Five2One and Devery + WFP spanning over 1 year and counting after starting with just a 8 week project.",
     "mainImage": "world-food-programme.png",
     "featuredBy": [
-        "KPMG.png",
-        "CIO.png",
-        "smartcompany.png",
-        "CA.png",
-        "martec.png"
+        {
+            "url":"KPMG.png",
+            "width":100
+        },
+        {
+            "url":"CIO.png",
+            "width":55
+        },
+        {
+            "url":"smartcompany.png",
+            "width":179
+        },
+        {
+            "url":"CA.png",
+            "width":160
+        },
+        {
+            "url":"martec.png",
+            "width":100
+        }
     ],
     "feedBack": {
         "name": "ANDREW RASHEED",

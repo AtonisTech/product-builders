@@ -2,12 +2,27 @@
     "title": "Transcendence",
     "listViewDesc": "The token contracts and AWS infrastructure were built and tested to be very robust and strong. The clients went onto raise an undisclosed amount of funds to build Australia's largest Solar Farm Sunraysia.",
     "mainImage":"study1.jpeg",
-    "featuredBy":[
-        "KPMG.png",
-        "CIO.png",
-        "smartcompany.png",
-        "CA.png",
-        "martec.png"
+    "featuredBy": [
+        {
+            "url": "KPMG.png",
+            "width": 100
+        },
+        {
+            "url": "CIO.png",
+            "width": 55
+        },
+        {
+            "url": "smartcompany.png",
+            "width": 179
+        },
+        {
+            "url": "CA.png",
+            "width": 160
+        },
+        {
+            "url": "martec.png",
+            "width": 100
+        }
     ],
     "feedBack":{
         "name":"MILTON ZHOU",

@@ -4,13 +4,14 @@ import Link from 'next/link';
 import path from 'path';
 import data from '../../data/case-studies.json';
 import fs from 'fs';
-import matter from 'gray-matter';
+import orgData from '../../data/organization.json';
+import Head from 'next/head';
 
 interface CaseStudyMeta {
     title: string,
     listViewDesc: string,
     mainImage: string,
-    featuredBy: string[],
+    featuredBy: { url: string, width: number }[],
     feedBack: {
         name: string,
         position: string,
@@ -60,6 +61,12 @@ export const getStaticProps: GetStaticProps<{ posts: CaseStudy[] }> = async (
 const Page = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <>
+            <Head>
+                <title>Case studies - {orgData.name}</title>
+                <meta name="description" content={`Case studies from ${orgData.name}`} />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/logo-96.png" />
+            </Head>
             <div className=' flex w-full pt-24 pb-8 justify-center items-center gap-x-4 gap-y-4 bg-brand-600 text-center'>
                 <div className='container'>
                     <h3 className='text-white text-center'>{data.title}</h3>

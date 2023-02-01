@@ -4,6 +4,8 @@ import path from 'path';
 import Image from 'next/image';
 import md from 'markdown-it';
 import matter from "gray-matter";
+import Head from 'next/head';
+import orgData from '../../data/organization.json';
 
 interface PodCastMeta {
     title: string,
@@ -80,6 +82,12 @@ const Page = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
     return (
         <>
+            <Head>
+                <title>{title} - {orgData.name}</title>
+                <meta name="description" content={`${title} podcast from ${orgData.name}`} />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/logo-96.png" />
+            </Head>
             <section className="flex justify-center items-center gap-x-4 gap-y-4 mt-[64px] py-20 bg-brand-600 bg-fixed" style={{
                 backgroundPosition: '0 0,50% 100%',
                 backgroundSize: 'auto, cover',
