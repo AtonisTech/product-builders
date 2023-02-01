@@ -131,7 +131,7 @@ const Page = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
                                     <div className=' relative top-0 z-[1] -mb-1 pt-[6px] pb-1 px-3 float-left bg-brand-600 flex items-center rounded-tr-md'>
                                         <h5 className=' text-white pr-2 float-left mb-0'>{feedBack.name}</h5>
                                         {
-                                            feedBack.profile && <a href={feedBack.profile} target="_blank" className='py-[3px] flex mb-0 ml-2 justify-center items-start max-w-full bg-transparent'>
+                                            feedBack.profile && <a rel="noreferrer" href={feedBack.profile} target="_blank" className='py-[3px] flex mb-0 ml-2 justify-center items-start max-w-full bg-transparent'>
                                                 <Image src={linkedin} alt="LinkedIn" width={16}></Image>
                                             </a>
                                         }
