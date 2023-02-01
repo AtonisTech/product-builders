@@ -3,11 +3,26 @@
     "listViewDesc": "5.5 Million/Month in loans for SocietyOne in 6 months from launch. A highly scalable, smart, user centric product that gives the custom complete power of creating, analysing, evaluating and generating personal loans for their clients.",
     "mainImage": "societyone.png",
     "featuredBy": [
-        "KPMG.png",
-        "CIO.png",
-        "smartcompany.png",
-        "CA.png",
-        "martec.png"
+        {
+            "url":"KPMG.png",
+            "width":100
+        },
+        {
+            "url":"CIO.png",
+            "width":55
+        },
+        {
+            "url":"smartcompany.png",
+            "width":179
+        },
+        {
+            "url":"CA.png",
+            "width":160
+        },
+        {
+            "url":"martec.png",
+            "width":100
+        }
     ],
     "feedBack": {
         "name": "ANDREW RASHEED",

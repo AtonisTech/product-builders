@@ -3,11 +3,26 @@
     "listViewDesc": "The application was built and released to the customer in budget. The app is currently raising funds after successful runs.",
     "mainImage": "onroute.png",
     "featuredBy": [
-        "KPMG.png",
-        "CIO.png",
-        "smartcompany.png",
-        "CA.png",
-        "martec.png"
+        {
+            "url":"KPMG.png",
+            "width":100
+        },
+        {
+            "url":"CIO.png",
+            "width":55
+        },
+        {
+            "url":"smartcompany.png",
+            "width":179
+        },
+        {
+            "url":"CA.png",
+            "width":160
+        },
+        {
+            "url":"martec.png",
+            "width":100
+        }
     ],
     "feedBack": {
         "name": "STEPHANIE KHALIL",

@@ -1,5 +1,6 @@
 {
     "name": "APP MAKER",
+    "description":"We help people to make their idea application.",
     "nav":[
         {
             "label":"Podcast",
