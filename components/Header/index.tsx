@@ -13,7 +13,7 @@ const NavBar = () => {
             })
         }
         <Link href={orgData.deticatedAction.url} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 inline-block ml-3">
-            <span className="absolute top-0 left-0 flex w-0 h-full mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-accent-600 group-hover:w-full opacity-90"></span>
+            <span className="absolute top-0 right-0 group-hover:left-0 flex w-0 h-full mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-accent-600 group-hover:w-full group-hover:opacity-90"></span>
             <span className="relative group-hover:text-white text-xs font-semibold tracking-[1px] uppercase">{orgData.deticatedAction.label}</span>
         </Link>
     </nav>
