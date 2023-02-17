@@ -93,16 +93,15 @@ type FormData = {
 };
 
 type ContactFormProps = {
-    fields: Field[];
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ fields }) => {
+const ContactForm: React.FC<ContactFormProps> = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [formData, setFormData] = useState<FormData>({});
     const [message,setMessage] = useState('');
 
-    const formRef = useRef(null);
+    const formRef = useRef<HTMLFormElement>(null);
 
     const setFieldValue = (value: FormData)=>{
         setFormData((prevFormData) => ({
