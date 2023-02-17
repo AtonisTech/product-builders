@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useCallback, useRef, useState } from "react";
 import directorData from "../../data/director.json";
 import linkedinLogo from "../../public/linkedin.svg";
 import {Pathway_Gothic_One} from "@next/font/google";
@@ -9,21 +9,169 @@ import img1 from "../../public/footer/one.png";
 import img2 from "../../public/footer/two.png";
 import img3 from "../../public/footer/three.png";
 import img4 from "../../public/footer/four.png";
+import contactFormData from "../../data/contact-form.json";
+import orgData from "../../data/organization.json";
+import Popup from "@components/Popup";
+
+interface FormSlideProps{
+    field:Field,
+    slideNumber:number,
+    canBack:boolean,
+    formData: FormData,
+    totalFields:number,
+    setFieldValue: (value: FormData) => void,
+    handleContinueClick: () => void,
+    handleBackClick: () => void,
+    handleSubmit: () => void,
+    isLastQuestion:boolean,
+    style: React.CSSProperties,
+};
+const FormSlide: React.FC<FormSlideProps> = ({ field, formData, setFieldValue, handleBackClick, handleContinueClick, handleSubmit, style, isLastQuestion, slideNumber,totalFields,canBack}) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = event.target;
+        setFieldValue({ [name]: value });
+        
+    };
+
+    const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setFieldValue({[name]: value});
+    };
+
+    return (
+        <div className=" relative inline-block align-top w-full h-full whitespace-normal text-left duration-500 ease transition-transform" style={style}>
+            <div className="flex p-6 flex-row justify-between flex-wrap items-stretch content-between text-base">
+                <div className="h-[32px] mr-auto mb-6 ml-auto pr-4 pl-4 justify-center items-center rounded-[3px] text-center bg-[#e9e8f0] flex">{slideNumber} / {totalFields}</div>
+                <div className="w-full self-stretch">
+                    <label htmlFor="name" className="mb-7 text-black text-xl font-semibold text-center">{field.question}</label>
+                    {
+                        (field.type === 'text' || field.type === 'email' || field.type === 'phone') && <input type="text" name={field.fieldName} value={formData[field.fieldName] || ""} onChange={handleInputChange} className="focus:outline-none focus:border-red-600 block w-[80%] h-[60px] mx-auto mt-[48px] mb-[24px] pb-[10px] border border-b-[rgb(197, 194, 207)] border-t-0 border-x-0 text-[28px] text-center px-3 pt-2" placeholder="Enter your name" />
+                    }
+                    {
+                        (field.type === 'text-area') && <textarea name={field.fieldName} value={formData[field.fieldName] || ""} onChange={handleInputChange} className=" h-auto min-h-[120px] mb-0 rounded text-gray-900 text-lg leading-6 w-full block px-3 py-2 align-middle bg-white border border-[rgb(197, 194, 207)] focus-visible:border-red-600 focus-visible:ring-1 focus-visible:ring-brand-600" />
+                    }
+                    {
+                        (field.type === 'multi-choice') && <div className=" flex justify-start flex-wrap items-center pl-9">
+                            {
+                                field.options?.map((option,ind)=>{
+                                    return (
+                                        <label key={ind} className="flex items-center grow-0 shrink basis-2/4 bg-transparent pl-5 text-xs leading-5 font-normal">
+                                            <input type="radio" name={field.fieldName} value={option} checked={formData[field.fieldName] === option} onChange={handleOptionChange} className=" h-8 my-0 mr-3 float-left"></input>
+                                            <span className=" text-black inline-block cursor-pointer font-normal mb-0">{option}</span>
+                                        </label>
+                                    );
+                                })
+                            }
+                        </div>
+                    }
+                    <div className="flex h-[48px] justify-center items-center text-base">
+                        {/* <div id="name-alert" className="text-alert" style="display: none;">Error: Please provide your name to continue</div> */}
+                    </div>
+                </div>
+                <div className="relative flex w-full justify-center flex-wrap items-end content-between self-end">
+                    <div onClick={isLastQuestion ? handleSubmit : handleContinueClick } className="flex px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 w-full cursor-pointer">
+                        <span className="absolute top-0 right-0 group-hover:left-0 flex w-0 h-full mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-accent-600 group-hover:w-full group-hover:opacity-90"></span>
+                        <span className="w-full text-center relative group-hover:text-white text-base font-semibold tracking-[1px] uppercase">{ isLastQuestion ? 'submit': 'continue'}</span>
+                    </div>
+                    {
+                        canBack && <div onClick={handleBackClick} className=" mt-6 mb-0 grow-0 shrink basis-full duration-200 ease-in delay-75 text-[#c5c2cf] text-base font-normal leading-4 w-full text-center hover:text-brand-600 cursor-pointer">Back</div>
+                    }
+                </div>
+            </div>
+        </div>
+    );
+};
+
+type Field = {
+    question: string;
+    type: "text" | "email" | "phone" | "multi-choice" | "text-area";
+    options?: string[];
+    fieldName: string;
+};
+type FormData = {
+    [fieldName: string]: string;
+};
 
 type ContactFormProps = {
+    fields: Field[];
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ fields }) => {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [formData, setFormData] = useState<FormData>({});
+    const [message,setMessage] = useState('');
+
+    const formRef = useRef(null);
+
+    const setFieldValue = (value: FormData)=>{
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            ...value,
+        }));
+    };
+
+    const isCurrentSlideValid = () => {
+        const currentField = contactFormData.fields[currentSlide];
+        const value = formData[currentField.fieldName];
+        switch (currentField.type) {
+            case "text":
+                return Boolean(value);
+            case "email":
+                return Boolean(
+                    value.match(
+                        // Email validation regex pattern
+                        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                    )
+                );
+            case "phone":
+                return Boolean(value.match(/^\d{10}$/));
+            case "multi-choice":
+                return value ? true : false;
+            case "text-area":
+                return true;
+            default:
+                return false;
+        }
+    };
+
+    const handleContinueClick = () => {
+        if (isCurrentSlideValid()) {
+            setCurrentSlide(currentSlide + 1);
+        }
+    };
+
+    const handleBackClick = () => {
+        setCurrentSlide(currentSlide - 1);
+    };
+
+    const handleSubmit = async () => {
+        try {
+            await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            setMessage("Form submitted successfly")
+            // show success message or close the form
+        } catch (err) {
+            // handle error
+        }
+        console.log(formData);
+    };
 
     return (
         <div className="container">
+            <Popup message={message} success={true}/>
             <div className="flex justify-center">
-                <h3 className={`text-white text-5xl font-semibold tracking-tight uppercase ${alternateFont.className}`}>Have a project for us?</h3>
+                <h3 className={`text-white text-5xl font-semibold tracking-tight uppercase ${alternateFont.className}`}>{contactFormData.heading}</h3>
             </div>
             <div className="relative top-0 mx-auto lg:absolute lg:top-20 left-auto right-0 bottom-auto w-64 lg:mr-3.5 flex-col items-center lg:items-start flex mt-2 mb-6 content-start">
                 <div>
                     <div className=" relative flex mb-6 flex-col justify-start flex-nowrap items-start">
-                        <p className="text-white p-4 self-start rounded-[3px] bg-accent-200">“Hi, I’m Vaibhav (or just &apos;V&apos;). <br /> Are you looking for an experienced development team? <br />Look no further. <br /><span className=" text-sec-brand-600">Contact us today for your</span> <span className="text-sec-brand-600">free consultation worth $900!</span>” </p>
+                        <p className="text-white p-4 self-start rounded-[3px] bg-accent-200" dangerouslySetInnerHTML={{__html:contactFormData.intro}}></p>
                         <div className=" absolute left-1/2 lg:left-[8%] top-auto right-auto bottom-[-14px] h-6 w-6 mb-0 border-t-[18px] border-r-[16px] border-b border-l-[8px] border-l-accent-600 border-r-accent-600 border-t-accent-200 border-b-black" style={{ borderTopStyle: 'solid',borderBottomStyle: 'none',borderLeftStyle: 'solid'}}></div>
                     </div>
                 </div>
@@ -35,34 +183,36 @@ const ContactForm: React.FC<ContactFormProps> = ({ }) => {
                     </Link>
                 </div>
                 <div>
-                    <p className="text-white opacity-70 text-sm mb-0">Director @ Atonis Tech</p>
+                    <p className="text-white opacity-70 text-sm mb-0">Director @ {orgData.name}</p>
                 </div>
             </div>
             <div className="mt-0 mb-0 justify-center items-center flex mr-[-15px] ml-[-15px] flex-wrap">
                 <div className="max-w-full basis-full md:max-w-[50%] grow md:basis-[50%] mb-4 pr-4 pl-4 flex-1">
                     <div className=" relative z-10 flex h-full mt-6 mr-0 ml-0 p-0 justify-center items-center overflow-hidden rounded-[3px] bg-white shadow-[1px_0_12px_0_rgba(0,0,0,.12)] text-center">
                         <div className="w-full">
-                            <form>
+                            <form ref={formRef}>
                                 <div className="h-full relative text-center">
                                     <div className=" overflow-visible relative block z-[1] left-0 right-0 h-full whitespace-nowrap">
-                                        <div className=" relative inline-block align-top w-full h-full whitespace-normal text-left">
-                                            <div className="flex p-6 flex-row justify-between flex-wrap items-stretch content-between text-base">
-                                                <div className="h-[32px] mr-auto mb-6 ml-auto pr-4 pl-4 justify-center items-center rounded-[3px] text-center bg-[#e9e8f0] flex">1 / 6</div>
-                                                <div className="w-full self-stretch">
-                                                    <label htmlFor="name" className="mb-7 text-black text-xl font-semibold text-center">Let&apos;s start with your name:</label>
-                                                    <input type="text" className="focus:outline-none focus:border-red-600 block w-[80%] h-[60px] mx-auto mt-[48px] mb-[24px] pb-[10px] border border-b-[rgb(197, 194, 207)] border-t-0 border-x-0 text-[28px] text-center px-3 pt-2" name="name" placeholder="Enter your name" id="name-input"/>
-                                                    <div className="flex h-[48px] justify-center items-center text-base">
-                                                        {/* <div id="name-alert" className="text-alert" style="display: none;">Error: Please provide your name to continue</div> */}
-                                                    </div>
-                                                </div>
-                                                <div className="relative flex w-full justify-center flex-wrap items-end content-between self-end">
-                                                    <Link href={"#"} className="flex px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 w-full">
-                                                        <span className="absolute top-0 left-0 flex w-0 h-full mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-accent-600 group-hover:w-full opacity-90"></span>
-                                                        <span className="w-full text-center relative group-hover:text-white text-base font-semibold tracking-[1px] uppercase">continue</span>
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {
+                                            (contactFormData.fields as Field[]).map((field,ind)=>{
+                                                return <FormSlide 
+                                                    style={{
+                                                        transform: `translateX(-${(formRef.current?.offsetWidth||0)*currentSlide}px)`
+                                                    }}
+                                                    key={ind}
+                                                    field={field}
+                                                    formData={formData}
+                                                    canBack={ind!==0}
+                                                    setFieldValue={setFieldValue}
+                                                    handleContinueClick={handleContinueClick}
+                                                    handleBackClick={handleBackClick}
+                                                    handleSubmit={handleSubmit}
+                                                    slideNumber={ind+1} 
+                                                    totalFields={contactFormData.fields.length}
+                                                    isLastQuestion={ind===(contactFormData.fields.length-1)}
+                                                />
+                                            })
+                                        }
                                     </div>
                                 </div>
                             </form>
