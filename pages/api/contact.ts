@@ -17,6 +17,8 @@ export default async function contact(
                 pass: `${process.env.EMAIL_PASSWORD as string}`,
             },
             secure: true,
+            logger: true,
+            debug: true,
         });
 
         const message = {
