@@ -16,13 +16,12 @@ const Popup = ({ message, success }:{ message:string, success:boolean }) => {
     }, [message]);
 
     const bgClass = success ? "bg-green-500" : "bg-red-500";
-    const iconClass = success ? "fas fa-check-circle" : "fas fa-exclamation-circle";
 
     return (
         <div
             className={`fixed top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-300 ease-out z-[99999999] ${visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
         >
-            <div className={`relative bg-white rounded-lg shadow-xl ${bgClass}`}>
+            <div className={`relative rounded-lg shadow-xl ${bgClass}`}>
                 <button
                     className="absolute top-0 right-0 m-4 text-gray-500 hover:text-gray-700 focus:outline-none"
                     onClick={() => {
