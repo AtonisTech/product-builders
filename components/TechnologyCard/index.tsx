@@ -61,7 +61,7 @@ const CustomerCard = ({ customer }: {
 
 const TechCard = () => {
     return <>
-        <div className=" py-[104px] bg-[#e9e8f0]">
+        <div className=" py-[104px] bg-[#e9e8f0]" id="services">
             <div className=" container">
                 <div className="my-0 justify-center items-center flex mx-[-15px] flex-wrap">
                     <div className=" max-w-[75%] basis-[75%] mb-4 px-[15px] flex-1 bg-transparent">
