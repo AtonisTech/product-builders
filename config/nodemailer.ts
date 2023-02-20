@@ -4,7 +4,6 @@ const email = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASSWORD;
 const recipient = process.env.RECIPIENT_EMAIL;
 
-console.log(email,pass,recipient);
 
 export const transporter = createTransport({
     service:'gmail',

@@ -15,7 +15,7 @@ const NavBar: React.FC<NavBarProps> = ({ className, onClickOption }) => {
         <nav role="navigation" className={`h-16 justify-end items-center hidden lg:flex ${className}`}>
             {
                 orgData.nav.map((tab, ind) => {
-                    return <Link key={ind} href={tab.url} onClick={() => { onClickOption && onClickOption() }} className="hover:text-brand-600 transition-colors text-xs font-semibold tracking-[1px] uppercase p-5 bg-white w-full lg:w-fit">{tab.label}</Link>
+                    return <Link key={ind} href={tab.url} onClick={() => { onClickOption && onClickOption() }} className="hover:text-brand-600 transition-colors text-xs font-semibold tracking-[1px] leading-5 uppercase p-5 bg-white w-full lg:w-fit">{tab.label}</Link>
                 })
             }
             <Link href={orgData.deticatedAction.url} onClick={() => { onClickOption && onClickOption() }} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 inline-block lg:ml-3 w-full lg:w-fit">

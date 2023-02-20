@@ -1,0 +1,29 @@
+{
+    "items":[
+        {
+            "heading":"1. VAST EXPERIENCE",
+            "desc":"Our team has delivered global projects for over 40+ companies in over 20+ industries.",
+            "icon":"mobile.svg"
+        },
+        {
+            "heading": "2. PROFITABLE CODE",
+            "desc": "Our code helps our clients generate $millions every month. We're all about impact.",
+            "icon": "code.svg"
+        },
+        {
+            "heading": "3. INDUSTRY EXPERTS",
+            "desc": "We've trained and developed 1000s of Engineers for multi nationals to veteran developers.",
+            "icon": "expert.svg"
+        },
+        {
+            "heading": "4. TRUSTED",
+            "desc": "We're trusted by companies big and small with scaling their business with technology.",
+            "icon": "trust.svg"
+        },
+        {
+            "heading": "5. PRODUCT FOCUSED",
+            "desc": "We're truly passionate about products, and have even built our own start up called Laddr.",
+            "icon": "focus.svg"
+        }
+    ]
+}

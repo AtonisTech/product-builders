@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
     useEffect(() => { vidRef?.current?.play(); }, []);
 
     return <div className="relative flex overflow-hidden h-[600px] lg:h-[640px] flex-wrap lg:flex-nowrap mt-[64px] items-center bg-transparent py-[104px]">
-        <div className=" container">
+        <div className=" container lg:px-10 xl:px-0">
             <div className="mt-0 mb-0 justify-center items-center flex mx-[-15px] flex-wrap content">
                 <div className="max-w-[100%] lg:max-w-[75%] basis-[100%] lg:basis-[75%]  mb-4 px-[15px] flex-1 bg-transparent">
                     <div className=" relative z-50 flex flex-col flex-wrap items-center lg:items-start">
