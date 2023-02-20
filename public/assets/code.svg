@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="42px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>profit</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.-home" transform="translate(-461.000000, -4616.000000)" stroke="#DF3940">
+            <g id="advantage" transform="translate(0.000000, 4191.000000)">
+                <g id="cards" transform="translate(152.000000, 426.000000)">
+                    <g id="profit" transform="translate(310.000000, 0.000000)">
+                        <polyline id="Path" stroke-width="2" stroke-linecap="square" points="13 22 9 26 13 30"></polyline>
+                        <polyline id="Path" stroke-width="2" stroke-linecap="square" points="31 22 35 26 31 30"></polyline>
+                        <path d="M21.3992187,32.5 L21.3992187,31.2804687 C19.1570312,31.1875 17.5929688,29.984375 17.5,28.0046875 L19.2007812,28.0046875 C19.2882813,29.1367188 20.2179688,29.7273438 21.3992187,29.8039062 L21.3992187,26.0632813 L20.7976562,25.89375 C19.0148438,25.3632812 17.8171875,24.4390625 17.8171875,22.8804687 C17.8171875,21.1085938 19.3484375,19.8890625 21.3992187,19.7578125 L21.3992187,18.5 L22.0992187,18.5 L22.0992187,19.7578125 C24.1773437,19.878125 25.59375,21.1359375 25.6757812,22.9078125 L24.0515625,22.9078125 C23.909375,21.9234375 23.1929687,21.3328125 22.0992187,21.2234375 L22.0992187,24.7070312 L22.5476562,24.8273438 C23.9804688,25.2375 25.7851562,26.0085938 25.7851562,28.0265625 C25.7851562,29.8257812 24.4015625,31.1328125 22.0992187,31.275 L22.0992187,32.5 L21.3992187,32.5 Z M22.0992188,29.7929688 C23.3296875,29.6617187 24.15,28.9617188 24.15,28.0046875 C24.15,27.0039062 23.1054688,26.5664062 22.0992188,26.265625 L22.0992188,29.7929688 Z M21.3992187,24.5101563 L21.3992187,21.2234375 C20.234375,21.321875 19.490625,21.9726562 19.490625,22.8421875 C19.490625,23.8210938 20.5023438,24.2367188 21.3992187,24.5101563 Z" id="$" stroke-width="0.25" fill="#DF3940" fill-rule="nonzero"></path>
+                        <path d="M6,6 L8,6" id="Path" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M14,6 L16,6" id="Path" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M30,6 L38,6" id="Path" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M0,12 L44,12" id="Path" stroke-width="2" stroke-linecap="square"></path>
+                        <rect id="Rectangle" stroke-width="2" stroke-linecap="square" x="0" y="0" width="44" height="40"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

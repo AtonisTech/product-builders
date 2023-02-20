@@ -8,9 +8,13 @@ module.exports = {
 
 		// Or if using `src` directory:
 		"./src/**/*.{ts,tsx}",
+		'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
 	],
 	theme: {
 		extend: {
+			maxWidth: {
+				'1200px': '75rem',
+			},
 			boxShadow: {
 				'light': '1px 1px 3px 0 rgba(0, 0, 0, .2)',
 			},
@@ -36,6 +40,7 @@ module.exports = {
 	},
 	plugins: [
 		require('@tailwindcss/line-clamp'),
-		require('@tailwindcss/typography')
+		require('@tailwindcss/typography'),
+		require('flowbite/plugin')
 	],
 }

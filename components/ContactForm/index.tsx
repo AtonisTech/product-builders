@@ -158,7 +158,6 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         } catch (err) {
             // handle error
         }
-        console.log(formData);
     };
 
     return (

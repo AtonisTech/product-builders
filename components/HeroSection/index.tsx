@@ -14,17 +14,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
 
     useEffect(() => { vidRef?.current?.play(); }, []);
 
-    return <div className="relative flex overflow-hidden h-[600px] mt-[64px] items-center bg-transparent py-[104px]">
-        <div className=" container">
+    return <div className="relative flex overflow-hidden h-[600px] lg:h-[640px] flex-wrap lg:flex-nowrap mt-[64px] items-center bg-transparent py-[104px]">
+        <div className=" container lg:px-10 xl:px-0">
             <div className="mt-0 mb-0 justify-center items-center flex mx-[-15px] flex-wrap content">
-                <div className="max-w-[75%] basis-[75%] mb-4 px-[15px] flex-1 bg-transparent">
-                    <div className=" relative z-50 flex flex-col flex-wrap items-start">
+                <div className="max-w-[100%] lg:max-w-[75%] basis-[100%] lg:basis-[75%]  mb-4 px-[15px] flex-1 bg-transparent">
+                    <div className=" relative z-50 flex flex-col flex-wrap items-center lg:items-start">
                         {
                             heroData.heading.map((heading,ind)=>{
-                                return <h2 key={ind} className=" text-white">{heading}</h2>;
+                                return <h2 key={ind} className=" text-white text-center lg:text-left">{heading}</h2>;
                             })
                         }
-                        <div className="flex mt-4 flex-wrap">
+                        <div className="flex mt-4 flex-wrap justify-center lg:justify-start">
                             {
                                 heroData.highlights.map((highlight,_ind)=>{
                                     return <div key={_ind} className=" static block h-auto py-[4px] px-[12px] text-[14px] w-auto mt-[8px] self-end rounded-[20px] bg-sec-brand-400">
@@ -35,12 +35,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                                 })
                             }
                         </div>
-                        <div className="mt-6 flex items-center">
+                        <div className="mt-6 flex items-center flex-col justify-center lg:flex-row">
                             <Link href={heroData.action.url} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 inline-block">
                                 <span className="absolute top-0 right-0 group-hover:left-0 flex w-0 h-full mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-accent-600 group-hover:w-full group-hover:opacity-90"></span>
                                 <span className="relative group-hover:text-white text-xs font-semibold tracking-[1px] uppercase">{heroData.action.label}</span>
                             </Link>
-                            <Link href={heroData.secAction.url} className="ml-4 duration-500 text-white/60 text-[12px] font-medium leading-tight hover:text-sec-brand-600">{heroData.secAction.label}</Link>
+                            <Link href={heroData.secAction.url} className="mt-4 lg:mt-0 lg:ml-4 duration-500 text-white/60 text-[12px] font-medium leading-tight hover:text-sec-brand-600">{heroData.secAction.label}</Link>
                         </div>
                     </div>
                 </div>
