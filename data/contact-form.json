@@ -5,17 +5,23 @@
         {
             "question":"Let's start with your name:",
             "type":"text",
-            "fieldName":"Name"
+            "fieldName":"Name",
+            "placeholder":"Enter your name",
+            "errorText":"Please enter name."
         },
         {
             "question":"What's your email address?",
             "type":"email",
-            "fieldName": "Email"
+            "fieldName": "Email",
+            "placeholder": "Enter your email address",
+            "errorText": "Please enter valid email address."
         },
         {
             "question":"What's your phone number?",
             "type":"phone",
-            "fieldName": "Phone"
+            "fieldName": "Phone",
+            "placeholder": "Enter your phone number",
+            "errorText": "Please enter valid phone number."
         },
         {
             "question":"Do you have a deadline?",
@@ -26,7 +32,8 @@
                 "6 - 12 months",
                 "No deadline"
             ],
-            "fieldName": "Deadline"
+            "fieldName": "Deadline",
+            "errorText": "Please chose come deadline option."
         },
         {
             "question":"What budget are you considering?",
@@ -37,12 +44,14 @@
                 "$50,000 - 100,000",
                 "Other"
             ],
-            "fieldName": "Budget"
+            "fieldName": "Budget",
+            "errorText": "Please chose one of budget option."
         },
         {
             "question":"Tell us about your project:",
             "type":"text-area",
-            "fieldName": "ProjectDetail"
+            "fieldName": "ProjectDetail",
+            "errorText": "Please provide short detail about your project."
         }
     ]
 }

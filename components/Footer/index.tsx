@@ -8,7 +8,7 @@ type FooterProps = {
 const Footer: React.FC<FooterProps> = ({ onlyLogoOnFooter }) => {
 
     return (
-        <footer className="relative flex flex-row justify-center flex-wrap items-start content-start overflow-visible bg-accent-600 delay-200 ease-in pt-24">
+        <footer id="hire-us" className="relative flex flex-row justify-center flex-wrap items-start content-start overflow-visible bg-accent-600 delay-200 ease-in pt-24">
             <ContactForm/>
             <div className="w-full mt-20 pt-10 pb-5 border-t border-accent-200">
                 <div className="container">

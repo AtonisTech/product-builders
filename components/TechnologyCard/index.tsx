@@ -75,7 +75,7 @@ const TechCard = () => {
                     {
                         details.map((a, ind) => {
                             return <div key={ind} className="mb-0 px-0 flex-1 bg-transparent max-w-full basis-full md:max-w-[50%] lg:max-w-none md:basis-1/2 lg:basis-0">
-                                <div className="overflow-hidden mx-[7.5px] py-8 px-4 rounded-[3px] bg-white shadow-[1px_0_12px_0_rgba(0,0,0,.12)] flex flex-row lg:flex-col pb-6">
+                                <div className=" h-full overflow-hidden mx-[7.5px] py-8 px-4 rounded-[3px] bg-white shadow-[1px_0_12px_0_rgba(0,0,0,.12)] flex flex-row gap-x-4 lg:flex-col lg:gap-x-0 pb-6">
                                     <div className=" relative flex h-[64px] mb-[32px] justify-center flex-wrap w-20 lg:w-full scale-75 md:scale-100">
                                         <div className=" absolute z-20 flex h-[64px] mx-auto justify-center items-center">
                                             <Image src={`/assets/${a.icon}`} alt={"mobile icon is not displayed"} width={30} height={30}></Image>

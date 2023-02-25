@@ -25,8 +25,11 @@ interface FormSlideProps{
     handleSubmit: () => void,
     isLastQuestion:boolean,
     style: React.CSSProperties,
+    isCurrentSlideValid: ()=>boolean;
 };
-const FormSlide: React.FC<FormSlideProps> = ({ field, formData, setFieldValue, handleBackClick, handleContinueClick, handleSubmit, style, isLastQuestion, slideNumber,totalFields,canBack}) => {
+const FormSlide: React.FC<FormSlideProps> = ({ field, isCurrentSlideValid, formData, setFieldValue, handleBackClick, handleContinueClick, handleSubmit, style, isLastQuestion, slideNumber,totalFields,canBack}) => {
+
+    const [isInvalid,setIsValid] = useState(true);
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
         setFieldValue({ [name]: value });
@@ -37,6 +40,19 @@ const FormSlide: React.FC<FormSlideProps> = ({ field, formData, setFieldValue, h
         const { name, value } = event.target;
         setFieldValue({[name]: value});
     };
+    
+    const onClickPrimaryButton = () => {
+        const isValid = isCurrentSlideValid();
+        console.log("isCurrentSlideValid()", isValid, isCurrentSlideValid());
+        setIsValid(isValid);
+        if (isLastQuestion){
+            handleSubmit();
+        }else{
+            handleContinueClick()
+        }
+    };
+
+    console.log("isInvalid", isInvalid, field);
 
     return (
         <div className=" relative inline-block align-top w-full h-full whitespace-normal text-left duration-500 ease transition-transform" style={style}>
@@ -45,18 +61,18 @@ const FormSlide: React.FC<FormSlideProps> = ({ field, formData, setFieldValue, h
                 <div className="w-full self-stretch">
                     <label htmlFor="name" className="mb-7 text-black text-xl font-semibold text-center">{field.question}</label>
                     {
-                        (field.type === 'text' || field.type === 'email' || field.type === 'phone') && <input type="text" name={field.fieldName} value={formData[field.fieldName] || ""} onChange={handleInputChange} className="focus:outline-none focus:border-red-600 block w-[80%] h-[60px] mx-auto mt-[48px] mb-[24px] pb-[10px] border border-b-[rgb(197, 194, 207)] border-t-0 border-x-0 text-[28px] text-center px-3 pt-2" placeholder="Enter your name" />
+                        (field.type === 'text' || field.type === 'email' || field.type === 'phone') && <input type="text" name={field.fieldName} value={formData[field.fieldName] || ""} onChange={handleInputChange} className=" focus:!ring-0 focus:!shadow-none focus:!shadow-white focus:outline-none focus:border-red-600 block w-[80%] h-[60px] mx-auto mt-[48px] mb-[24px] pb-[10px] border border-b-[rgb(197, 194, 207)] border-t-0 border-x-0 text-[28px] text-center px-3 pt-2" placeholder={field.placeholder} />
                     }
                     {
                         (field.type === 'text-area') && <textarea name={field.fieldName} value={formData[field.fieldName] || ""} onChange={handleInputChange} className=" h-auto min-h-[120px] mb-0 rounded text-gray-900 text-lg leading-6 w-full block px-3 py-2 align-middle bg-white border border-[rgb(197, 194, 207)] focus-visible:border-red-600 focus-visible:ring-1 focus-visible:ring-brand-600" />
                     }
                     {
-                        (field.type === 'multi-choice') && <div className=" flex justify-start flex-wrap items-center pl-9">
+                        (field.type === 'multi-choice') && <div className=" flex justify-start flex-wrap items-center pl-9 gap-y-4">
                             {
                                 field.options?.map((option,ind)=>{
                                     return (
-                                        <label key={ind} className="flex items-center grow-0 shrink basis-2/4 bg-transparent pl-5 text-xs leading-5 font-normal">
-                                            <input type="radio" name={field.fieldName} value={option} checked={formData[field.fieldName] === option} onChange={handleOptionChange} className=" h-8 my-0 mr-3 float-left"></input>
+                                        <label key={ind} className="cursor-pointer flex items-center grow-0 shrink basis-2/4 bg-transparent pl-5 text-xs leading-5 font-normal">
+                                            <input type="radio" name={field.fieldName} value={option} checked={formData[field.fieldName] === option} onChange={handleOptionChange} className="focus:!ring-0 focus:!shadow-none focus:!shadow-white my-0 mr-3 float-left"></input>
                                             <span className=" text-black inline-block cursor-pointer font-normal mb-0">{option}</span>
                                         </label>
                                     );
@@ -68,8 +84,13 @@ const FormSlide: React.FC<FormSlideProps> = ({ field, formData, setFieldValue, h
                         {/* <div id="name-alert" className="text-alert" style="display: none;">Error: Please provide your name to continue</div> */}
                     </div>
                 </div>
+                {
+                    (!isInvalid && field?.errorText) &&  <div className=" py-2 w-full flex">
+                        <span className=" text-red-600 text-lg font-medium text-center w-full">{field.errorText}</span>
+                    </div>
+                }
                 <div className="relative flex w-full justify-center flex-wrap items-end content-between self-end">
-                    <div onClick={isLastQuestion ? handleSubmit : handleContinueClick } className="flex px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 w-full cursor-pointer">
+                    <div onClick={onClickPrimaryButton } className="flex px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-sec-brand-600 w-full cursor-pointer">
                         <span className="absolute top-0 right-0 group-hover:left-0 flex w-0 h-full mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-accent-600 group-hover:w-full group-hover:opacity-90"></span>
                         <span className="w-full text-center relative group-hover:text-white text-base font-semibold tracking-[1px] uppercase">{ isLastQuestion ? 'submit': 'continue'}</span>
                     </div>
@@ -87,6 +108,8 @@ type Field = {
     type: "text" | "email" | "phone" | "multi-choice" | "text-area";
     options?: string[];
     fieldName: string;
+    placeholder?:string;
+    errorText?:string;
 };
 type FormData = {
     [fieldName: string]: string;
@@ -112,7 +135,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
 
     const isCurrentSlideValid = () => {
         const currentField = contactFormData.fields[currentSlide];
-        const value = formData[currentField.fieldName];
+        const value = formData[currentField.fieldName]||"";
         switch (currentField.type) {
             case "text":
                 return Boolean(value);
@@ -128,7 +151,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
             case "multi-choice":
                 return value ? true : false;
             case "text-area":
-                return true;
+                return value ? true : false;
             default:
                 return false;
         }
@@ -145,18 +168,22 @@ const ContactForm: React.FC<ContactFormProps> = () => {
     };
 
     const handleSubmit = async () => {
-        try {
-            await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-            setMessage("Form submitted successfly")
-            // show success message or close the form
-        } catch (err) {
-            // handle error
+        if (isCurrentSlideValid()) {
+            try {
+                await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+                setMessage("Form submitted successfly");
+                setCurrentSlide(0);
+                setFormData({});
+                // show success message or close the form
+            } catch (err) {
+                // handle error
+            }
         }
     };
 
@@ -208,7 +235,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
                                                     slideNumber={ind+1} 
                                                     totalFields={contactFormData.fields.length}
                                                     isLastQuestion={ind===(contactFormData.fields.length-1)}
-                                                />
+                                                    isCurrentSlideValid={isCurrentSlideValid}                                                />
                                             })
                                         }
                                     </div>
